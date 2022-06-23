@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "签名",
+  "usingComponents": {
+    "wyj-sign": "/uni_modules/wyj-sign/components/wyj-sign/wyj-sign"
+  }
+}

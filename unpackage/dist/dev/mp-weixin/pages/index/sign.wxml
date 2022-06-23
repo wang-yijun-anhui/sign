@@ -1,0 +1,1 @@
+<view class="content"><wyj-sign vue-id="41cf2e53-1" bgImg="{{bgImg}}" font_color="{{font_color}}" rotate="{{rotate}}" bind:__l="__l"></wyj-sign></view>
