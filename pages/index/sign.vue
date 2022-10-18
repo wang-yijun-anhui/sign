@@ -10,8 +10,8 @@
 			return {
 				uname:'',
 				font_color: 'pink',
-				bgImg:'', 				//https://alifei04.cfp.cn/creative/vcg/veer/1600water/veer-303195393.jpg
-				rotate:90,
+				bgImg:'https://cdn.other.ggjtaq.com/jtap_static/pages/study/watermark_bj.png',
+				rotate:0,
 			}
 		},
 	}

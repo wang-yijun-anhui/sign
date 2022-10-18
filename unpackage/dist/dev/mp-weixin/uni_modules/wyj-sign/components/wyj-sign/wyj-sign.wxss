@@ -77,8 +77,10 @@
   justify-content: center;
 }
 .sign_page .cover .cover_text.data-v-19d10464 {
+  width: 200rpx;
   opacity: .5;
   font-size: 200rpx;
+  word-wrap: break-word;
   color: #fff;
 }
 

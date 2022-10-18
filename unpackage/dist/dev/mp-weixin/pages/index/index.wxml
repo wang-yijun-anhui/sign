@@ -1,1 +1,1 @@
-<view class="content"><image class="sign" src="{{base64}}" mode="aspectFill"></image><view class="text-area"><text data-event-opts="{{[['tap',[['navgoto',['$event']]]]]}}" class="title" bindtap="__e">{{title}}</text></view><text class="base64">{{base64}}</text></view>
+<view class="content"><image class="sign" src="{{base64}}" mode="aspectFit"></image><view class="text-area"><text data-event-opts="{{[['tap',[['navgoto',['$event']]]]]}}" class="title" bindtap="__e">{{title}}</text></view><text class="base64">{{base64}}</text></view>

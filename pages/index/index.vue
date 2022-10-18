@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<image class="sign" :src="base64" mode="aspectFill"></image>
+		<image class="sign" :src="base64" mode="aspectFit"></image>
 		<view class="text-area">
 			<text class="title" @click="navgoto">{{title}}</text>
 		</view>

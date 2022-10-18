@@ -7,7 +7,6 @@
 			<canvas class="sign_canvas" 
 				disable-scroll="true" 
 				canvas-id="handWriting"
-				:style="bgImg ? 'background: url(' + bgImg + ');background-size:100% 100%;' : ''"
 				@touchstart.stop="handWritingStart" 
 				@touchmove.stop="handWritingMove"
 				@touchend.stop="handWritingEnd"
@@ -57,21 +56,7 @@
 		},
 		async created() {
 			this.ctx = uni.createCanvasContext('handWriting',this)
-			function getImagePath(img) { 																			//获取图片
-				return new Promise((resolve, reject) => {
-					uni.getImageInfo({
-						src: img,
-						success: (res) => {
-							resolve(res.path)
-						},
-						fail: () => {
-							resolve(null)
-						}
-					})
-			 })
-			}
-			let bg = await getImagePath(this.bgImg)
-			this.ctx.drawImage(bg, 0, 0, this.canvasW, this.canvasH);
+			this.drawbg()
 			this.ctx.setLineCap('round')
 			this.ctx.fillStyle = '#000000'
 		},
@@ -83,6 +68,24 @@
 			}).exec();
 		},
 		methods:{
+			async drawbg(){
+				function getImagePath(img) { 																			//获取图片
+					return new Promise((resolve, reject) => {
+						uni.getImageInfo({
+							src: img,
+							success: (res) => {
+								resolve(res.path)
+							},
+							fail: () => {
+								resolve(null)
+							}
+						})
+				 })
+				}
+				let bg = await getImagePath(this.bgImg)
+				this.ctx.drawImage(bg, -50, -50, 500, 900);
+				this.ctx.draw()
+			},
 			retDraw(){																				//取消按钮事件
 				this.flag = false
 				this.ctx.clearRect(0, 0, this.canvasW, this.canvasH)
@@ -230,8 +233,10 @@
 		align-items: center;
 		justify-content: center;
 		.cover_text{
+			width: 200rpx;
 			opacity: .5;
 			font-size: 200rpx;
+			word-wrap: break-word;
 			color: #fff;
 		}
 	}
