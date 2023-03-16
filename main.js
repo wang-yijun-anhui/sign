@@ -10,7 +10,7 @@ const app = new Vue({
 })
 app.$mount()
 // #endif
-
+// 代码合并123111111
 // #ifdef VUE3
 import { createSSRApp } from 'vue'
 export function createApp() {
